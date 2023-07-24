@@ -1,0 +1,21 @@
+parameters: {}
+environment: {}
+packages:
+    - name: sample
+      shared: false
+      environment:
+        DATABASE_CONNECTION: "${MONGO_DB_CONNECTION_STRING}"
+        DATABASE_NAME: "${MONGO_DB_DATABASE}"
+      parameters: {}
+      annotations: {}
+      functions:
+        - name: hello
+          binary: false
+          main: ""
+          runtime: python:default
+          web: true
+          webSecure: false
+          parameters: {}
+          environment: {}
+          annotations: {}
+          limits: {}
